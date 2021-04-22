@@ -23,27 +23,26 @@ const images = [
   },
 ];
 
+const makeImgTags = image => {
+  return`
+  <li>
+    <img src = ${image.url} alt = ${image.alt}>
+  </li>
+  `
+}
+
+// console.log(images);
+
+const makeImgTagsGallery = images
+  .map(makeImgTags)
+  .join('');
+
 
 const imagesContainerRef = document.querySelector('#gallery');
 
-const makeImageGallery = ({ url, alt }) => {
-  const listImgRef = document.createElement('li');
-  listImgRef.classList = 'gallery__item';
-  
-  
-  const imgRef = document.createElement('img');
-  imgRef.classList = 'gallery__img';
-  imgRef.src = url;
-  imgRef.alt = alt;  
+imagesContainerRef.insertAdjacentHTML('afterbegin', makeImgTagsGallery);
 
-  listImgRef.append(imgRef);
+console.log(makeImgTagsGallery);
 
-  return listImgRef;
-};
-
-const elements = images.map(makeImageGallery);
-
-console.log(elements);
-imagesContainerRef.append(...elements);
 
 

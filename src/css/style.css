@@ -4,14 +4,13 @@
   list-style: none;
 }
 
-.gallery__item {
-  height: 100vh;
-  flex-grow: 1;
+li {
   margin: auto;
   justify-content: space-around;
+  padding: 10px;
 }
 
-.gallery__img {
+img {
   display: block;
   width: 100%;
   height: auto;

@@ -9,6 +9,13 @@ const nameInput = document.querySelector('#name-output');
 
 inputEvent.addEventListener('input', onInputName);
 
-function onInputName(name) {    
-    nameInput.textContent = name.currentTarget.value;
+function onInputName(name) {
+
+    if (inputEvent.value === '') {
+        nameInput.textContent ='незнакомец';
+    }
+    else (nameInput.textContent = name.currentTarget.value);  
+   
 }
+
+

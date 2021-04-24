@@ -3,14 +3,12 @@ input), подставляет его текущее значение в `span#n
 пустой, в спане должна отображаться строка `'незнакомец'`.*/
 
 const inputEvent = document.querySelector('#name-input');
-console.dir(inputEvent);
+// console.dir(inputEvent);
 const nameInput = document.querySelector('#name-output');
-console.log(nameInput.textContent);
+// console.log(nameInput.textContent);
 
-inputEvent.addEventListener('input', onInputSubmit);
+inputEvent.addEventListener('input', onInputName);
 
-function onInputSubmit(name) {
-    if (name = inputEvent.value) {
-        nameInput.textContent = name;
-   }
+function onInputName(name) {    
+    nameInput.textContent = name.currentTarget.value;
 }

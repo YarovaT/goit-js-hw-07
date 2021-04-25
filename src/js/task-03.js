@@ -31,8 +31,6 @@ const makeImgTags = image => {
   `
 }
 
-// console.log(images);
-
 const makeImgTagsGallery = images
   .map(makeImgTags)
   .join('');

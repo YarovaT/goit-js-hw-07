@@ -20,7 +20,6 @@ const countItemsRef = (items) => {
         console.log(`Категория: ${titleRef.textContent}`);
         const itemRef = item.querySelectorAll('li');
         console.log(`Количество элементов: ${itemRef.length}`);
-
     })
 };
 
